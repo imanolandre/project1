@@ -32,7 +32,7 @@
     <body class="font-sans antialiased  bg-gray-100">
         <x-banner/>
 
-        <div class="pos  min-h-screen bg-gray-100 dark:bg-gray-900">
+        <div class="pos min-h-screen bg-gray-100 dark:bg-gray-900">
 
             @livewire('navigation-menu')
              <!-- Page Heading -->
@@ -42,8 +42,12 @@
 
             <!-- Page Content -->
             <main>
+                @yield('content')
 
             </main>
+            @stack('modals')
+
+            @livewireScripts
         </div>
 
     </body>

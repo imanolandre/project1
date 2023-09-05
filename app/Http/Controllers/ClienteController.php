@@ -20,7 +20,7 @@ class ClienteController extends Controller
     {
         $clientes = Cliente::paginate();
 
-        return view('cliente.index', compact('cliente'))
+        return view('cliente.index', compact('clientes'))
             ->with('i', (request()->input('page', 1) - 1) * $clientes->perPage());
     }
 
@@ -43,13 +43,15 @@ class ClienteController extends Controller
      */
     public function store(Request $request)
     {
-        request()->validate(Cliente::$rules);
+        $validatedData = $request->validate(Cliente::$rules);
 
-        $cliente = Cliente::create($request->all());
+        $cliente = Cliente::create($validatedData);
 
         return redirect()->route('clientes.index')
-            ->with('success', 'Cliente created successfully.');
+            ->with('success', 'Cliente creado exitosamente.');
     }
+
+
 
     /**
      * Display the specified resource.

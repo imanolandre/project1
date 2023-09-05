@@ -28,7 +28,7 @@ use Illuminate\Database\Eloquent\Model;
  */
 class Cliente extends Model
 {
-    
+
     static $rules = [
 		'nombrecliente' => 'required',
 		'correo' => 'required',

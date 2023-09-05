@@ -1,6 +1,6 @@
 <div class="box box-info padding-1">
     <div class="box-body">
-        
+
         <div class="form-group">
             {{ Form::label('nombrecliente') }}
             {{ Form::text('nombrecliente', $cliente->nombrecliente, ['class' => 'form-control' . ($errors->has('nombrecliente') ? ' is-invalid' : ''), 'placeholder' => 'Nombrecliente']) }}
@@ -53,12 +53,17 @@
         </div>
         <div class="form-group">
             {{ Form::label('regimenincorporación') }}
-            {{ Form::text('regimenincorporación', $cliente->regimenincorporación, ['class' => 'form-control' . ($errors->has('regimenincorporación') ? ' is-invalid' : ''), 'placeholder' => 'Regimenincorporación']) }}
+            {{ Form::select('regimenincorporación', [
+            'Alternativa 1' => 'Alternativa 1',
+            'Alternativa 2' => 'Alternativa 2',
+            'Alternativa 3' => 'Alternativa 3',
+            'Alternativa 4' => 'Alternativa 4',
+            ], $cliente->regimenincorporación, ['class' => 'form-control' . ($errors->has('regimenincorporación') ? ' is-invalid' : ''),'placeholder' => 'Seleccione']) }}
             {!! $errors->first('regimenincorporación', '<div class="invalid-feedback">:message</div>') !!}
         </div>
-        <div class="form-group">
+        <div class="form-group" enctype="multipart/form-data">
             {{ Form::label('constanciasituaciónFiscal') }}
-            {{ Form::text('constanciasituaciónFiscal', $cliente->constanciasituaciónFiscal, ['class' => 'form-control' . ($errors->has('constanciasituaciónFiscal') ? ' is-invalid' : ''), 'placeholder' => 'Constanciasituaciónfiscal']) }}
+            {{ Form::file('constanciasituaciónFiscal', ['class' => 'form-control-file' . ($errors->has('constanciasituaciónFiscal') ? ' is-invalid' : '')]) }}
             {!! $errors->first('constanciasituaciónFiscal', '<div class="invalid-feedback">:message</div>') !!}
         </div>
 
