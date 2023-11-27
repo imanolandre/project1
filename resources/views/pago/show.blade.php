@@ -13,62 +13,62 @@
                         <div class="card">
                             <div class="card-header">
                                 <div class="float-left">
-                                    <span class="card-title">{{ __('Show') }} Cliente</span>
+                                    <span class="card-title">{{ __('Show') }} Pago</span>
                                 </div>
                                 <div class="float-right">
-                                    <a class="btn btn-primary" href="{{ route('clientes.index') }}"> {{ __('Back') }}</a>
+                                    <a class="btn btn-primary" href="{{ route('pagos.index') }}"> {{ __('Back') }}</a>
                                 </div>
                             </div>
 
                             <div class="card-body">
 
                                 <div class="form-group">
-                                    <strong>Nombrecliente:</strong>
-                                    {{ $cliente->nombrecliente }}
+                                    <strong>Nombre:</strong>
+                                    {{ $pago->nombre }}
                                 </div>
                                 <div class="form-group">
-                                    <strong>Correo:</strong>
-                                    {{ $cliente->correo }}
+                                    <strong>Moneda:</strong>
+                                    {{ $pago->moneda }}
                                 </div>
                                 <div class="form-group">
-                                    <strong>Teléfono:</strong>
-                                    {{ $cliente->teléfono }}
+                                    <strong>Metododepago:</strong>
+                                    {{ $pago->metododepago }}
                                 </div>
                                 <div class="form-group">
-                                    <strong>Empresa:</strong>
-                                    {{ $cliente->empresa }}
+                                    <strong>Proyecto:</strong>
+                                    {{ $pago->proyecto }}
                                 </div>
                                 <div class="form-group">
-                                    <strong>Sitioweb:</strong>
-                                    {{ $cliente->sitioweb }}
+                                    <strong>Formadepago:</strong>
+                                    {{ $pago->formadepago }}
                                 </div>
                                 <div class="form-group">
-                                    <strong>Dirección:</strong>
-                                    {{ $cliente->dirección }}
+                                    <strong>Facturar:</strong>
+                                    {{ $pago->facturar }}
                                 </div>
                                 <div class="form-group">
-                                    <strong>Razónsocial:</strong>
-                                    {{ $cliente->razónsocial }}
+                                    <strong>Subtotal:</strong>
+                                    {{ $pago->subtotal }}
                                 </div>
                                 <div class="form-group">
-                                    <strong>Rfc:</strong>
-                                    {{ $cliente->rfc }}
+                                    <strong>Iva:</strong>
+                                    {{ $pago->iva }}
                                 </div>
                                 <div class="form-group">
-                                    <strong>Direcciónfiscal:</strong>
-                                    {{ $cliente->direcciónfiscal }}
+                                    <strong>Imputrasladados:</strong>
+                                    {{ $pago->imputrasladados }}
                                 </div>
                                 <div class="form-group">
-                                    <strong>Codigopostal:</strong>
-                                    {{ $cliente->codigopostal }}
+                                    <strong>Impuretenidos:</strong>
+                                    {{ $pago->impuretenidos }}
                                 </div>
                                 <div class="form-group">
-                                    <strong>Regimenincorporación:</strong>
-                                    {{ $cliente->regimenincorporación }}
+                                    <strong>Total:</strong>
+                                    {{ $pago->total }}
                                 </div>
                                 <div class="form-group">
-                                    <strong>Constanciasituaciónfiscal:</strong>
-                                    {{ $cliente->constanciasituaciónFiscal }}
+                                    <strong>Observaciones:</strong>
+                                    {{ $pago->observaciones }}
                                 </div>
 
                             </div>

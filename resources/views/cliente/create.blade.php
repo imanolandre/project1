@@ -1,30 +1,35 @@
-@extends('layouts.app')
+<x-app-layout>
+    <x-slot name="header">
+        <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
+            {{ __('Dashboard') }}
+        </h2>
+    </x-slot>
 
-@section('template_title')
-    {{ __('Create') }} Cliente
-@endsection
+    <div class="py-12">
+        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+            <section class="content container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
 
-@section('content')
-    <section class="content container-fluid">
-        <div class="row">
-            <div class="col-md-12">
+                        @includeif('partials.errors')
 
-                @includeif('partials.errors')
+                        <div class="card card-default">
+                            <div class="card-header">
+                                <span class="card-title">{{ __('Create') }} Cliente</span>
+                            </div>
+                            <div class="card-body">
+                                <form method="POST" action="{{ route('clientes.store') }}"  role="form" enctype="multipart/form-data">
+                                    @csrf
 
-                <div class="card card-default">
-                    <div class="card-header">
-                        <span class="card-title">{{ __('Create') }} Cliente</span>
-                    </div>
-                    <div class="card-body">
-                        <form method="POST" action="{{ route('clientes.store') }}"  role="form" enctype="multipart/form-data">
-                            @csrf
+                                    @include('cliente.form')
 
-                            @include('cliente.form')
-
-                        </form>
+                                </form>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </section>
         </div>
-    </section>
-@endsection
+    </div>
+</x-app-layout>
+

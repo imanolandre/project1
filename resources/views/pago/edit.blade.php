@@ -8,20 +8,21 @@
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <section class="content container-fluid">
-                <div class="row">
+                <div class="">
                     <div class="col-md-12">
 
                         @includeif('partials.errors')
 
                         <div class="card card-default">
                             <div class="card-header">
-                                <span class="card-title">{{ __('Create') }} Proyecto</span>
+                                <span class="card-title">{{ __('Update') }} Pago</span>
                             </div>
                             <div class="card-body">
-                                <form method="POST" action="{{ route('proyectos.store') }}"  role="form" enctype="multipart/form-data">
+                                <form method="POST" action="{{ route('pagos.update', $pago->id) }}"  role="form" enctype="multipart/form-data">
+                                    {{ method_field('PATCH') }}
                                     @csrf
 
-                                    @include('proyecto.form')
+                                    @include('pago.form')
 
                                 </form>
                             </div>

@@ -15,7 +15,7 @@
       }
   </style>
 
-    <div class="bg-glass flex items-center w-100position-left sm:max-w-md mt-6 px-6 py-4 bg-white dark:bg-gray-900 shadow-md overflow-hidden sm:rounded-lg">
+    <div class="bg-glass flex items-center w-100 position-left sm:max-w-md mt-6 px-6 py-4 bg-white dark:bg-gray-900 shadow-md overflow-hidden sm:rounded-lg">
         {{ $slot }}
     </div>
 </div>

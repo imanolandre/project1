@@ -28,4 +28,5 @@ Route::middleware([
 
     Route::resource('clientes', \App\Http\Controllers\ClienteController::class);
     Route::resource('proyectos', \App\Http\Controllers\ProyectoController::class);
+    Route::resource('pagos', \App\Http\Controllers\PagoController::class);
 });
